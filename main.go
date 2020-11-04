@@ -37,7 +37,7 @@ func main() {
 	}
 	defer when.Close()
 	//// cuando you make your memes in videos
-	frase("cuando haces tus momos en videos")
+	frase("cuando haces tus momos en consola")
 
 	fmt.Println()
 
