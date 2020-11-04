@@ -12,7 +12,7 @@ import (
 var letters = []string{}
 
 func addthis() {
-	pos := " .:!1| "
+	pos := " .:!10| "
 	for _, x := range pos {
 		for y := 0; y < 280/(len(pos)); y++ {
 			letters = append(letters, string(x))
