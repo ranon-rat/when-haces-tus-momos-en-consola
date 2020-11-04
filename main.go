@@ -29,12 +29,8 @@ func frase(f string) {
 }
 func main() {
 	addthis()
-	when, err := os.Open("when.jpeg")
-	if err != nil {
+	when, _ := os.Open("when.jpeg")
 
-		fmt.Println("the file didnt exist, retard")
-		panic(err)
-	}
 	defer when.Close()
 	//// cuando you make your memes in videos
 	frase("cuando haces tus momos en consola")
@@ -44,29 +40,20 @@ func main() {
 	/// file open when
 
 	openThis(when)
-	futuro, err := os.Open("futuro.jpg")
-	if err != nil {
-		fmt.Println("shit this didnt exist")
-		panic(err)
-	}
+	futuro, _ := os.Open("futuro.jpg")
+
 	defer futuro.Close()
 	/////// the future is today you listen,old man?
 	frase("el futuro es hoy ¿Oiste viejo?")
 
 	openThis(futuro)
-	baneando, err := os.Open("baneando.jpg")
-	if err != nil {
-		fmt.Println("fuck you")
-	}
+	baneando, _ := os.Open("baneando.jpg")
 	defer baneando.Close()
 	frase("pero te terminan baneando")
 	openThis(baneando)
 
-	jaja, err := os.Open("jajaja.jpeg")
-	if err != nil {
-		fmt.Println("fuck you")
-		panic(err)
-	}
+	jaja, _ := os.Open("jajaja.jpeg")
+
 	defer jaja.Close()
 	frase("oh! mi lente de contacto jajajajajajj")
 	openThis(jaja)
