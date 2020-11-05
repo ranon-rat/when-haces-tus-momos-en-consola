@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"image"
 	_ "image/jpeg"
+	_ "image/png"
 	"io"
 	"os"
 	"time"
@@ -12,7 +13,7 @@ import (
 var letters = []string{}
 
 func addthis() {
-	pos := " .:!|10@"
+	pos := " .:!|10"
 	for _, x := range pos {
 		for y := 0; y < 257/(len(pos)); y++ {
 			letters = append(letters, string(x))
@@ -68,4 +69,9 @@ func main() {
 	//oh my contact eye ahahhahahahhah
 	frase("oh! mi lente de contacto jajajajajajj")
 	openThis(jaja)
+	gopher, _ := os.Open("gopher.png")
+	defer gopher.Close()
+	frase("momos en golang")
+	openThis(gopher)
+
 }
