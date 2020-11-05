@@ -12,7 +12,7 @@ import (
 var letters = []string{}
 
 func addthis() {
-	pos := " .:!10|"
+	pos := " .:!10"
 	for _, x := range pos {
 		for y := 0; y < 257/(len(pos)); y++ {
 			letters = append(letters, string(x))
@@ -39,7 +39,7 @@ func openThis(f io.Reader) {
 			}
 			fmt.Print(letters[color])
 		}
-		fmt.Println()
+		fmt.Println("\033[32m")
 
 	}
 }
