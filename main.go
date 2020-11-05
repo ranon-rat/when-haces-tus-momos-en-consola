@@ -47,29 +47,29 @@ func openThis(f io.Reader) {
 
 func main() {
 	addthis()
-	when, _ := os.Open("when.jpeg")
+	when, _ := os.Open("image/when.jpeg")
 	defer when.Close()
 	//// cuando you make your memes in videos
 	frase("cuando haces tus momos en consola")
 	fmt.Println()
 	/// file open when
 	openThis(when)
-	futuro, _ := os.Open("futuro.jpg")
+	futuro, _ := os.Open("image/futuro.jpg")
 	defer futuro.Close()
 	/////// the future is today you listen,old man?
 	frase("el futuro es hoy ¿Oiste viejo?")
 	openThis(futuro)
-	baneando, _ := os.Open("baneando.jpg")
+	baneando, _ := os.Open("image/baneando.jpg")
 	defer baneando.Close()
 	// but they band you
 	frase("pero te terminan baneando")
 	openThis(baneando)
-	jaja, _ := os.Open("jajaja.jpeg")
+	jaja, _ := os.Open("image/jajaja.jpeg")
 	defer jaja.Close()
 	//oh my contact eye ahahhahahahhah
 	frase("oh! mi lente de contacto jajajajajajj")
 	openThis(jaja)
-	gopher, _ := os.Open("gopher.png")
+	gopher, _ := os.Open("image/gopher.png")
 	defer gopher.Close()
 	frase("momos en golang")
 	openThis(gopher)
