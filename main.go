@@ -12,9 +12,9 @@ import (
 var letters = []string{}
 
 func addthis() {
-	pos := " .:!|I10"
+	pos := " .:!10|"
 	for _, x := range pos {
-		for y := 0; y < 280/(len(pos)); y++ {
+		for y := 0; y < 257/(len(pos)); y++ {
 			letters = append(letters, string(x))
 		}
 	}
@@ -33,7 +33,7 @@ func openThis(f io.Reader) {
 	for y := img.Bounds().Min.Y; y < img.Bounds().Max.Y/division; y++ {
 		for x := img.Bounds().Min.X; x < img.Bounds().Max.X/division; x++ {
 			r, g, b, _ := img.At(x*division, y*division).RGBA()
-			color := ((r / 280) + (g / 280) + (b / 280)) / 3
+			color := ((r / 257) + (g / 257) + (b / 257)) / 3
 			for int(color) > len(letters)-1 {
 				color--
 			}
