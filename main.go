@@ -39,7 +39,7 @@ func openThis(f io.Reader) {
 			}
 			fmt.Print(letters[color])
 		}
-		fmt.Println("\033[32m")
+		fmt.Println()
 
 	}
 }
