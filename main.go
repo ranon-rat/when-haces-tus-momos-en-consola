@@ -50,7 +50,7 @@ func main() {
 	when, _ := os.Open("image/when.jpeg")
 	defer when.Close()
 	//// cuando you make your memes in videos
-	frase("cuando haces tus momos en consola")
+	frase("when haces tus momos en consola")
 	fmt.Println()
 	/// file open when
 	openThis(when)
